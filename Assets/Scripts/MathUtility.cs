@@ -18,8 +18,9 @@ public class MathUtility : MonoBehaviour {
         if (Vector3.Distance(mine, other) < max) {
             return mine;
         } else {
-            Vector3 val = Vector3.Normalize(other);
-            return val * max;
+            Vector3 val = mine - other;
+            val = Vector3.ClampMagnitude(val, max);
+            return val + other;
         }
         
     }

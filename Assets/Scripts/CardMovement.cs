@@ -4,7 +4,7 @@ using System.Collections;
 public class CardMovement : MonoBehaviour {
 
     public float smoothFactor = 5.4f;
-    public float maxClamp = 0.1f;
+    public float maxClamp = 0.5f;
 
     Vector3 rootPos;
     bool isClicked;
@@ -52,9 +52,9 @@ public class CardMovement : MonoBehaviour {
 
         // Update x and y co-ordinates with smoothing
         // I don't want the distance between the card and the mouse to be too high, so I clamp the distance.
-        float xTranslate = Mathf.Lerp(transform.position.x, newPos.x, Time.deltaTime * smoothFactor * 2);
-        float yTranslate = Mathf.Lerp(transform.position.y, newPos.y, Time.deltaTime * smoothFactor * 2);
-        transform.position = MathUtility.ClampVectorDistance(new Vector3(xTranslate, yTranslate, transform.position.z), transform.position, maxClamp);
+        float xTranslate = Mathf.Lerp(transform.position.x, newPos.x, Time.deltaTime * smoothFactor * 2.5f);
+        float yTranslate = Mathf.Lerp(transform.position.y, newPos.y, Time.deltaTime * smoothFactor * 2.5f);
+        transform.position = new Vector3(xTranslate, yTranslate, transform.position.z);
 
         // Adjust if out of camera bounds
         if (newPos.x > view.x + view.width) {

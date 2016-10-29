@@ -3,8 +3,7 @@ using System.Collections;
 
 public class CardMovement : MonoBehaviour {
 
-    public float smoothFactor = 5.4f;
-    public float maxClamp = 0.5f;
+    public float smoothFactor = 5.3f;
 
     Vector3 rootPos;
     bool isClicked;

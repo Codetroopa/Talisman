@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// The abstract class 
+/// </summary>
 public class CardObject : MonoBehaviour {
 
 	// Use this for initialization
@@ -10,6 +13,6 @@ public class CardObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        CardObject card = new CardObject();
 	}
 }

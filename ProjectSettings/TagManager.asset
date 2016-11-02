@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - Foreground
+  - Board
   - 
   - 
   - 
@@ -43,4 +43,13 @@ TagManager:
     locked: 0
   - name: Camera
     uniqueID: 1490242969
+    locked: 0
+  - name: Board
+    uniqueID: 2078084259
+    locked: 0
+  - name: Combatant
+    uniqueID: 3851022259
+    locked: 0
+  - name: Card
+    uniqueID: 2206079213
     locked: 0

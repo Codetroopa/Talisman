@@ -2,9 +2,11 @@
 using System.Collections;
 
 /// <summary>
-/// The abstract class 
+/// A class 'container' that holds the Card Object Prefab along with the methods/variables required to instantiate it.
 /// </summary>
 public class CardObject : MonoBehaviour {
+
+    public Transform prefab;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +15,6 @@ public class CardObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        CardObject card = new CardObject();
+        
 	}
 }

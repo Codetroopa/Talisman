@@ -4,10 +4,10 @@ using System.Collections;
 public class Health : MonoBehaviour {
 
     public int maxHealth;
-    public int health;
-    public int armour;
+    int health;
+    int armour;
 
-    public void OnDamage(int dmg) {
+    public void DoDamage(int dmg) {
         if (armour > 0) {
             dmg = Mathf.Clamp(dmg - armour, 0, int.MaxValue);
             armour--;
@@ -15,7 +15,7 @@ public class Health : MonoBehaviour {
         health = Mathf.Clamp(health - dmg, 0, maxHealth);
     }
 
-    public void OnHeal(int heal) {
+    public void DoHeal(int heal) {
         health = Mathf.Clamp(health + heal, 0, maxHealth);
     }
 

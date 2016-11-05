@@ -28,12 +28,12 @@ public class Attack : MonoBehaviour {
             Health enemyHp = rayHit.collider.GetComponent<Health>();
             Attack enemy = rayHit.collider.GetComponent<Attack>();
             if (enemyHp) {
-                enemyHp.OnDamage(attack);
+                enemyHp.DoDamage(attack);
                 canAttack = false;
             }
             Health hp = GetComponent<Health>();
             if (enemy) {
-                hp.OnDamage(enemy.attack);
+                hp.DoDamage(enemy.attack);
             }
         }
 
@@ -41,7 +41,7 @@ public class Attack : MonoBehaviour {
     }
 
     void OnMouseDrag() {
-        isDrag = true;
+        if (attack >= 1) isDrag = true;
     }
 
 }

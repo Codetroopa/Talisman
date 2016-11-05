@@ -13,9 +13,7 @@ Features:
 						- Create the many different components a Card Object may need to function:
 	[X]	Health
 	[X] Attack
-	[ ] CombatantDeath
-	[ ] Vengeance (Like Deathrattle)
-	[ ] 
+	[X] CombatantDeath
 	
 [ ] Player Object Components:
 	[ ] Mana-like resource

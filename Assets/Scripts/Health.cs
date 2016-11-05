@@ -4,11 +4,11 @@ using System.Collections;
 public class Health : MonoBehaviour {
 
     public int maxHealth;
-    int health;
-    int armour;
+    public int health;
+    public int armour;
 
     public void OnDamage(int dmg) {
-        if (armour >= 0) {
+        if (armour > 0) {
             dmg = Mathf.Clamp(dmg - armour, 0, int.MaxValue);
             armour--;
         }
@@ -30,7 +30,7 @@ public class Health : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
+        health = maxHealth;
 	}
 	
 	// Update is called once per frame

@@ -4,22 +4,35 @@ Features:
 [x] Card Movement script:
 						- With smooth linear interpolation based off of player's framerate.
 						- Confined within the boundary of the camera
-[ ] Basic board design:
+						
+[ ] Basic board design (This can come later):
 						- A board layout with defined areas to 'drop' cards into play
 						- Must be symmetrical and even for both players
-[ ] CardObject:
-						- Create the CardObject hierarchy to be the common parent for all cards
-						- Will have shared components: Cost, Name, Description, SpriteRenderer
-						- Perhaps make a prefab for it
-[ ] CardObject interaction script:
-						- Include generic behaviours for clicking a CardObject in play.
-						- Able to select another CardObject as a target
+						
+[ ] Card Object Components:
+						- Create the many different components a Card Object may need to function:
+	[X]	Health
+	[X] Attack
+	[ ] CombatantDeath
+	[ ] Vengeance (Like Deathrattle)
+	[ ] 
+	
+[ ] Player Object Components:
+	[ ] Mana-like resource
+	[X] Health
+	[ ] PlayerDeath
+
 [ ] Board 'drop zone' script:
 						- Allow a zone to transform a Card into its corresponding CardObject
 						- If a zone already has a CardObject, prevent another card from taking over its space
+						
 [ ] Card to Board interaction:
 						- Placing a card in and open spot will spawn an object of its type (if applicable)
-[ ]
+						
+[ ] Basic UI for Main Screen
+						- Play Button | Deck Creation | General Options | Exit Game
+						- 
+						
 [ ]
 [ ]
 [ ]
@@ -31,3 +44,6 @@ Improvements:
 						- Clip the distance it can be away from your mouse
 [ ] Multiplayer Networking:
 						- This will take a lot of research and thinking...
+[ ] Combatant :
+						- Have the card 'tilt' as you move it around
+						- Clip the distance it can be away from your mouse

@@ -3,13 +3,14 @@ using System.Collections;
 
 public class Attack : MonoBehaviour {
 
-    public int attack;
-    public bool isDrag = false;
-    public bool canAttack = true;
+    public int maxAttack;
+    int attack;
+    bool isDrag = false;
+    bool canAttack = true;
 
 	// Use this for initialization
 	void Start () {
-	    
+        attack = maxAttack;
 	}
 	
 	// Update is called once per frame
@@ -28,12 +29,12 @@ public class Attack : MonoBehaviour {
             Health enemyHp = rayHit.collider.GetComponent<Health>();
             Attack enemy = rayHit.collider.GetComponent<Attack>();
             if (enemyHp) {
-                enemyHp.DoDamage(attack);
+                enemyHp.OnDamage(attack);
                 canAttack = false;
             }
             Health hp = GetComponent<Health>();
             if (enemy) {
-                hp.DoDamage(enemy.attack);
+                hp.OnDamage(enemy.attack);
             }
         }
 

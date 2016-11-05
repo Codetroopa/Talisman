@@ -259,7 +259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 196829134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.05, y: -5.98, z: 0}
+  m_LocalPosition: {x: 0, y: -12.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -273,10 +273,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 196829134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cc97c5b8992d214099708e1d0f0a191, type: 3}
+  m_Script: {fileID: 11500000, guid: b3d098d9e8017224987a9aceab988730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothFactor: 5.3
+  maxHealth: 0
+  health: 0
+  armour: 0
 --- !u!1 &624613617
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +320,7 @@ GameObject:
   - 61: {fileID: 659342439}
   - 114: {fileID: 659342438}
   - 114: {fileID: 659342437}
+  - 114: {fileID: 659342442}
   m_Layer: 0
   m_Name: Warrior (1)
   m_TagString: Untagged
@@ -336,9 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d23560145a19c840ab5957480c4de8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 2
-  isDrag: 0
-  canAttack: 1
+  maxAttack: 0
 --- !u!114 &659342438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,6 +416,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &659342442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 659342436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c06eeaa8c41d84ea864af21b498176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1161354739
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +440,7 @@ GameObject:
   - 61: {fileID: 1161354744}
   - 114: {fileID: 1161354741}
   - 114: {fileID: 1161354743}
+  - 114: {fileID: 1161354745}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Untagged
@@ -443,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1161354739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.57, y: -2.73, z: 0}
+  m_LocalPosition: {x: 9.57, y: -5.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -491,7 +504,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -443945037
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a34b792f95e1c7e4aa827ebb33c14d38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -508,9 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d23560145a19c840ab5957480c4de8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 2
-  isDrag: 0
-  canAttack: 1
+  maxAttack: 1
 --- !u!61 &1161354744
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -525,6 +536,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
+--- !u!114 &1161354745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1161354739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c06eeaa8c41d84ea864af21b498176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296031060
 GameObject:
   m_ObjectHideFlags: 0

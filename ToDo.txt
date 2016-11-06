@@ -11,13 +11,13 @@ Features:
 						
 [ ] Card Object Components:
 						- Create the many different components a Card Object may need to function:
-	[X]	Health
+	[X]	Health + Armour
 	[X] Attack
 	[X] CombatantDeath
 	
 [ ] Player Object Components:
 	[ ] Mana-like resource
-	[X] Health
+	[X] Health + Armour
 	[ ] PlayerDeath
 
 [ ] Board 'drop zone' script:

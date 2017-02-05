@@ -11,7 +11,7 @@ public class CardMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start() {
-        rootPos = new Vector3(0f, 0f, 0f);
+        rootPos = new Vector3(0f, 16.875f, 0f);
 	}
 	
 	// Update is called once per frame

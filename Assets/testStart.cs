@@ -5,7 +5,7 @@ public class testStart : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameManager.instance().generateBoardFromCamera(10, 10);
+        GameManager.instance().generateBoardFromCamera(8, 8);
 	}
 	
 }

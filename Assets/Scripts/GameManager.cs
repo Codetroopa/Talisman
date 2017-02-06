@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour {
         board = new Tile[x, y];
 
         // create a template for the tiles
+        GameObject container = new GameObject("GridContainer");
         GameObject obj = new GameObject();
         BoxCollider2D col = obj.AddComponent<BoxCollider2D>();
         col.size = new Vector2(tileWidth, tileHeight);
@@ -38,9 +39,9 @@ public class GameManager : MonoBehaviour {
         // create a 2d array of Tiles
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
-                Object inst = Instantiate(obj, new Vector3(startLoc.x + ((tileWidth * (2 * i + 1)) / 2), 
+                obj.name = "tile" + i + "-" + j;
+                Instantiate(obj, new Vector3(startLoc.x + ((tileWidth * (2 * i + 1)) / 2), 
                     startLoc.y - ((tileHeight * (2 * j + 1)) / 2), 0), Quaternion.identity);
-                inst.name = "tile" + i + "-" + j;
             }
         }
     }

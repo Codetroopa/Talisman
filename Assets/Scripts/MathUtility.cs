@@ -24,4 +24,10 @@ public class MathUtility : MonoBehaviour {
         }
         
     }
+
+    public static Vector2 getCamSize() {
+        float h = Camera.main.orthographicSize * 2.0f;
+        float w = Camera.main.aspect * h;
+        return new Vector2(w, h);
+    }
 }

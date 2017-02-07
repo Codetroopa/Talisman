@@ -18,6 +18,10 @@ public class Tile : MonoBehaviour {
         return (obj == null);
     }
 
+    public Tile() {
+
+    }
+
 	// Use this for initialization
 	void Start () {
 	    

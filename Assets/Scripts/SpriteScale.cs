@@ -2,15 +2,15 @@
 using System.Collections;
 
 /// <summary>
-/// Enforces that the sprite is scaled to fit in the BoxCollider of this object
+/// Enforces that the sprite is scaled to fit in the Parent's BoxCollider of this object
 /// </summary>
-[RequireComponent (typeof (BoxCollider2D), typeof(SpriteRenderer))]
+[RequireComponent (typeof(SpriteRenderer))]
 public class SpriteScale : MonoBehaviour {
 
 	void Start () {
         // required vars
         SpriteRenderer rend = GetComponent<SpriteRenderer>();
-        BoxCollider2D col = GetComponent<BoxCollider2D>();
+        BoxCollider2D col = GetComponentInParent<BoxCollider2D>();
 
         // change transform scale
         transform.localScale = new Vector3(

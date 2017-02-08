@@ -44,16 +44,22 @@ public class GameManager : MonoBehaviour {
         container.transform.position = center;
 
         // create a 2d array of Tiles
-        for (int i = -(x / 2); i < Mathf.CeilToInt(x / 2.0f); i++) {
-            for (int j = -(y / 2); j < Mathf.CeilToInt(y / 2.0f); j++) {
-                Vector3 pos = new Vector3(center.x + (i * tileWidth + (((x + 1) % 2) * (tileWidth / 2))),
-                   center.y + (j * tileHeight + (((y + 1) % 2) * (tileHeight / 2))), 0);
+        for (int i = Mathf.CeilToInt(y / 2.0f) - 1; i >= -(y / 2); i--) {
+            for (int j = -(x / 2); j < Mathf.CeilToInt(x / 2.0f); j++) {
+                Vector3 pos = new Vector3(center.x + (j * tileWidth + (((x + 1) % 2) * (tileWidth / 2))),
+                   center.y + (i * tileHeight + (((y + 1) % 2) * (tileHeight / 2))), 0);
 
+                // Instantiate prefab and add to Board
                 GameObject obj = (GameObject) Instantiate(tilePrefab, container.transform);
-                obj.name = "tile(" + (j + Mathf.CeilToInt(y / 2.0f)) + "," + (i + x / 2) + ")";
+                obj.name = "tile(" + (Mathf.CeilToInt(y / 2.0f) - (i + 1)) + "," + (j + x / 2) + ")";
                 obj.transform.position = pos;
                 BoxCollider2D col = obj.GetComponent<BoxCollider2D>();
                 col.size = new Vector2(tileWidth, tileHeight);
+
+                board[Mathf.CeilToInt(y / 2.0f) - (i + 1), j + x / 2] = obj.GetComponent<Tile>();
+
+                //TODO: fill board with user defined 'decklist'
+                // populateBoard(BoardState state, blah blah)
                 
             }
         }
@@ -64,6 +70,7 @@ public class GameManager : MonoBehaviour {
         Camera cam = Camera.main;
         float height = cam.orthographicSize * 2f;
         float width = cam.aspect * height;
+        board = new Tile[x, y];
         
         generateBoard(width, height, x, y, cam.transform.position);
     }

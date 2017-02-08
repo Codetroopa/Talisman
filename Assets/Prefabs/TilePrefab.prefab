@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013085340226}
   - 61: {fileID: 61000013061562356}
+  - 114: {fileID: 114000012227605762}
   m_Layer: 0
   m_Name: TilePrefab
   m_TagString: Untagged
@@ -85,6 +86,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114000012227605762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011661663958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb226cc105f67b418d65a2dc5dc1c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013120156676
 MonoBehaviour:
   m_ObjectHideFlags: 1

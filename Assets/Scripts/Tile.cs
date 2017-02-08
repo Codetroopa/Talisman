@@ -7,15 +7,15 @@ using System.Collections;
 public class Tile : MonoBehaviour {
 
     /// <summary>
-    /// The object that is on this Tile. Can be null.
+    /// Whether or not an object is on this Tile.
     /// </summary>
-    public GameObject obj = null;
+    bool occupied = false;
 
     /// <summary>
     /// Returns true if this Tile is empty
     /// </summary>
     public bool isEmpty() {
-        return (obj == null);
+        return occupied;
     }
 
     public Tile() {

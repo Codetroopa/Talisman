@@ -2,7 +2,7 @@
 using System.Collections;
 
 /// <summary>
-/// 
+/// Contains generic information and basic methods for a Tile on the board
 /// </summary>
 public class Tile : MonoBehaviour {
 
@@ -11,6 +11,10 @@ public class Tile : MonoBehaviour {
     /// </summary>
     bool occupied = false;
 
+    public Tile() {
+
+    }
+
     /// <summary>
     /// Returns true if this Tile is empty
     /// </summary>
@@ -18,8 +22,8 @@ public class Tile : MonoBehaviour {
         return occupied;
     }
 
-    public Tile() {
-
+    public Vector2 getLocation() {
+        return gameObject.transform.position;
     }
 
 	// Use this for initialization
